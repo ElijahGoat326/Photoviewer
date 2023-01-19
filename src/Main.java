@@ -12,18 +12,22 @@ public class Main extends Application {
         @Override
         public void start(Stage primaryStage) throws Exception {
             // Construct controls
-            FileInputStream input = new FileInputStream("resources/images/iconmonstr-home-6-48.png");
+            FileInputStream input = new FileInputStream("Fazbear.jpg");
             Image image = new Image(input);
             ImageView imageView = new ImageView(image);
-
-            HBox hbox = new HBox(imageView);
+            imageView.setFitHeight(200);
+            imageView.setFitWidth(400);
 
             // Layout the controls
+            HBox hbox = new HBox(imageView);
             Scene scene = new Scene(hbox, 400, 200);
+
             // Put the layout into the scene
+            primaryStage.setTitle("ImageView Experiment 1");
             primaryStage.setScene(scene);
             primaryStage.setTitle("My First JavaFX App");
             primaryStage.show();
+
         }
 
         public static void main(String[] args) {
