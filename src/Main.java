@@ -18,6 +18,10 @@ public class Main extends Application {
             imageView.setFitHeight(200);
             imageView.setFitWidth(400);
 
+            FileInputStream input2 = new FileInputStream("bonnie.jpg");
+            Image image2 = new Image(input2);
+            imageView.setImage(image2);
+
             // Layout the controls
             HBox hbox = new HBox(imageView);
             Scene scene = new Scene(hbox, 400, 200);
