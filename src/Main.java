@@ -1,5 +1,6 @@
 import javafx.application.Application;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.HBox;
@@ -18,9 +19,27 @@ public class Main extends Application {
             imageView.setFitHeight(200);
             imageView.setFitWidth(400);
 
-            FileInputStream input2 = new FileInputStream("bonnie.jpg");
+            FileInputStream input2 = new FileInputStream("Chica.jpeg");
             Image image2 = new Image(input2);
             imageView.setImage(image2);
+
+
+            FileInputStream input3 = new FileInputStream("Foxy.jpg");
+            Image image3 = new Image(input3);
+            imageView.setImage(image3);
+
+            FileInputStream input4 = new FileInputStream("springtrap.jpg");
+            Image image4 = new Image(input4);
+            imageView.setImage(image4);
+
+            FileInputStream input5 = new FileInputStream("bonnie.jpg");
+            Image image5 = new Image(input5);
+            imageView.setImage(image5);
+
+            int currentImage = 5;
+
+            Button button = new Button("My Label");
+            button.setText("Click me if you dare!");
 
             // Layout the controls
             HBox hbox = new HBox(imageView);
